@@ -55,25 +55,25 @@
 
 - (instancetype)centerInRect:(CGRect)rect
 {
-    self.frame = [NSView center:self.frame inRect:rect];
+    self.frame = [CALayer center:self.frame inRect:rect];
     return self;
 }
 
 - (instancetype)centerHorizontallyInRect:(CGRect)rect
 {
-    self.frame = [NSView center:self.frame horizontallyInRect:rect];
+    self.frame = [CALayer center:self.frame horizontallyInRect:rect];
     return self;
 }
 
 - (instancetype)centerVerticallyInRect:(CGRect)rect
 {
-    self.frame = [NSView center:self.frame verticallyInRect:rect];
+    self.frame = [CALayer center:self.frame verticallyInRect:rect];
     return self;
 }
 
 - (CGRect)rectCenteredInRect:(CGRect)rect
 {
-    return [NSView center:self.frame inRect:rect];
+    return [CALayer center:self.frame inRect:rect];
 }
 
 - (instancetype)move:(CGSize)movement

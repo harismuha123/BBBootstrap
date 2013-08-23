@@ -32,6 +32,8 @@ This package contains:
 
 - **UIKit extensions:** time-savers that deal with common usage patterns and will save you plenty of lines of code;
 - **Foundation extensions:** handy helpers to foundation classes that'll save duplicated code across projects;
+- **AppKit extensions:** time-savers for OS X.
+- **CoreAnimation extensions:** time-savers for CoreAnimation.
 - **Utility classes:** built to help you deal with every day concurrency (and other) patterns;
 - **Prefix macros:** because `ifdef`'ing on `DEBUG` sometimes just isn't enough.
 

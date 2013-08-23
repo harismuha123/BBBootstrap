@@ -127,8 +127,11 @@
 {
     id value = [self objectForKey:key];
     if (value == nil) return CGRectZero;
-
+#if TARGET_OS_IPHONE
     return [value CGRectValue];
+#else 
+    return [value rect];
+#endif
 }
 
 @end

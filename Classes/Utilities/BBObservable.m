@@ -22,7 +22,7 @@
 #import "BBObservable.h"
 
 #import "BBWeakWrapper.h"
-
+#import "NSObject+BBExtensions.h"
 
 
 #pragma mark -

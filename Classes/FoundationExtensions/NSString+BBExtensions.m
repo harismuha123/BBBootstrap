@@ -22,6 +22,7 @@
 #import "NSString+BBExtensions.h"
 
 #import "NSData+BBExtensions.h"
+#import "NSDate+BBExtensions.h"
 
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>

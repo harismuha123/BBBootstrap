@@ -30,6 +30,9 @@
     #define kBBFallbackAppVersion @"1.0.0"
 #endif
 
+#if !TARGET_OS_IPHONE
+#import <CoreServices/CoreServices.h>
+#endif
 
 
 #pragma mark - Utility functions
@@ -51,7 +54,17 @@ float BBSystemVersion()
     static CGFloat systemVersion;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
+#if TARGET_OS_IPHONE
         systemVersion = [[[UIDevice currentDevice] systemVersion] floatValue];
+#else
+        SInt32 major, minor, bugfix;
+        Gestalt(gestaltSystemVersionMajor, &major);
+        Gestalt(gestaltSystemVersionMinor, &minor);
+        Gestalt(gestaltSystemVersionBugFix, &bugfix);
+        
+        systemVersion = [[NSString stringWithFormat:@"%d.%d",
+                                   major, minor] floatValue];
+#endif
     });
 
     return systemVersion;

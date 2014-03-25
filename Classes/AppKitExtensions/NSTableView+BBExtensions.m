@@ -37,39 +37,4 @@
     [self endUpdates];
 }
 
-- (void)insertRow:(NSUInteger)row inSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation
-{
-    NSIndexPath* toInsert = [NSIndexPath indexPathForRow:row inSection:section];
-    [self insertRowAtIndexPath:toInsert withRowAnimation:animation];
-}
-
-- (void)reloadRowAtIndexPath:(NSIndexSet*)indexSet withRowAnimation:(NSTableViewAnimationOptions)animation
-{
-    [self reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:animation];
-}
-
-- (void)reloadRow:(NSUInteger)row inSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation
-{
-    NSIndexPath* toReload = [NSIndexPath indexPathForRow:row inSection:section];
-    [self reloadRowAtIndexPath:toReload withRowAnimation:animation];
-}
-
-- (void)deleteRow:(NSUInteger)row inSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation
-{
-    NSIndexPath* toDelete = [NSIndexPath indexPathForRow:row inSection:section];
-    [self deleteRowAtIndexPath:toDelete withRowAnimation:animation];
-}
-
-- (void)deleteSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation
-{
-    NSIndexSet* sections = [NSIndexSet indexSetWithIndex:section];
-    [self deleteSections:sections withRowAnimation:animation];
-}
-
-- (void)reloadSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation
-{
-    NSIndexSet* indexSet = [NSIndexSet indexSetWithIndex:section];
-    [self reloadSections:indexSet withRowAnimation:animation];
-}
-
 @end

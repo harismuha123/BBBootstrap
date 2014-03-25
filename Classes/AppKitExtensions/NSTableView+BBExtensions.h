@@ -35,16 +35,4 @@
  */
 - (void)updateWithBlock:(void (^)(NSTableView* tableView))block;
 
-- (void)insertRow:(NSUInteger)row inSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation;
-
-- (void)reloadRowAtIndexPath:(NSIndexSet*)indexSet withRowAnimation:(NSTableViewAnimationOptions)animation;
-
-- (void)reloadRow:(NSUInteger)row inSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation;
-
-- (void)deleteRow:(NSUInteger)row inSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation;
-
-- (void)deleteSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation;
-
-- (void)reloadSection:(NSUInteger)section withRowAnimation:(NSTableViewAnimationOptions)animation;
-
 @end

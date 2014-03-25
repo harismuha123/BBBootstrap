@@ -76,7 +76,7 @@
     BBCountDownLatch* latch = [[BBCountDownLatch alloc]
                                initWithName:name queue:queue counter:counter andCompletionBlock:block];
     [latch releaseQueueWhenDone];
-
+    
     return latch;
 }
 

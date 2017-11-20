@@ -17,7 +17,7 @@
 //  Copyright (c) 2013 Culturezoo LLC. All rights reserved.
 //
 
-typedef void (^NSWindowAnimationCompleteBlock)();
+typedef void (^NSWindowAnimationCompleteBlock)(void);
 
 @interface NSWindow (BBExtensions)
 - (void)fadeIn:(id)sender complete:(NSWindowAnimationCompleteBlock)complete;

@@ -23,7 +23,7 @@
 
 #import "BBWeakWrapper.h"
 #import "NSObject+BBExtensions.h"
-
+#import "BBGlobals.h"
 
 #pragma mark -
 

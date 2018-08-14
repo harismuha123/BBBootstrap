@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
   s.ios.source_files = "Classes/**/*.{h,m}"
   s.ios.frameworks = "UIKit"
 
-  s.osx.deployment_target = "10.7"
-  s.osx.source_files = FileList["Classes/**/*.{h,m}"].exclude("Classes/UIKitExtensions")
+  s.osx.deployment_target = "10.10"
+  s.osx.source_files = "Classes/**/*.{h,m}"
+  s.osx.exclude_files = "Classes/UIKitExtensions/*"
   s.osx.frameworks = "AppKit"
 end

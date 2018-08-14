@@ -88,3 +88,19 @@ extern void dispatch_after_millis(int64_t milliseconds, dispatch_block_t block);
         static dispatch_once_t name##_token; \
         dispatch_once(&name##_token, block); \
     }
+
+#pragma mark - Macros
+
+#ifndef LogDebug
+    #if DEBUG
+        #define LogDebug(fmt, ...)  NSLog((@"DEBUG | " fmt), ##__VA_ARGS__);
+    #else
+        #define LogDebug(fmt, ...)
+    #endif
+#endif
+#ifndef LogInfo
+    #define LogInfo(fmt, ...)   NSLog((@" INFO | " fmt), ##__VA_ARGS__);
+#endif
+#ifndef LogError
+    #define LogError(fmt, ...)  NSLog((@"ERROR | " fmt), ##__VA_ARGS__);
+#endif

@@ -20,6 +20,7 @@
 //
 
 #import "BBProfiler.h"
+#import "BBGlobals.h"
 
 #import <mach/mach_time.h>
 
